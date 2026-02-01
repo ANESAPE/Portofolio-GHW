@@ -1,58 +1,118 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio | Ghini Haberta Wiwoho</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <nav>
-    <h2 class="logo">Ghini Haberta Wiwoho</h2>
-    <ul>
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#project">Project</a></li>
-      <li><a href="#contact">Kontak</a></li>
-    </ul>
-  </nav>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo">GHW</div>
 
-  <section class="hero">
-    <h1>Halo, Saya <span>Ghini Haberta Wiwoho</span></h1>
-    <p>Data Analyst | IT Enthusiast</p>
-    <button onclick="openGithub()">GitHub Saya</button>
-  </section>
+    <div class="menu-toggle" id="menuToggle">☰</div>
 
-  <section id="about">
-    <h2>Tentang Ghini Haberta Wiwoho</h2>
-    <p>
-      Saya tertarik di bidang data dan teknologi.
-      Berpengalaman dalam pengolahan dan analisis data.
-    </p>
-  </section>
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  </div>
+</header>
 
-  <section id="project">
-    <h2>Project</h2>
-    <div class="card">
-      <h3>Data Cleansing</h3>
-      <p>Membersihkan data duplikat menggunakan Python.</p>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-text">
+    <h1>Hi, I'm <span>Ghini Haberta Wiwoho</span></h1>
+    <p>Data Analytic | IT Enthusiast</p>
+    <a href="#about" class="btn">More Info</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+
+  <div class="row">
+    <img src="images/fotoaboutme.png" class="photo">
+
+    <div>
+      <p>
+        Saya tertarik pada bidang IT, data,
+        dan pengembangan sistem teknologi modern.
+      </p>
+
+      <button class="btn" onclick="openPopup('about')">
+        Contact Me
+      </button>
     </div>
-    <div class="card">
-      <h3>Dashboard</h3>
-      <p>Membuat dashboard interaktif.</p>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section">
+  <h2>Education</h2>
+
+  <div class="edu-container">
+
+    <div class="edu-slider">
+      <div class="edu-slides">
+        <img src="images/fotosemhas.jpeg">
+        <img src="images/fotoo1.jpeg">
+        <img src="images/fotoo2.jpeg">
+      </div>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Kontak</h2>
-    <p>Email: ghinihw@email.com</p>
-    <p>LinkedIn: linkedin.com/in/ghinihw</p>
-  </section>
+    <div>
+      <h3>Sebelas Maret University – Faculty of Mathematics and Natural Sciences</h3>
+      <button class="btn" onclick="openPopup('edu')">
+        Detail
+      </button>
+    </div>
 
-  <footer>
-    <p>© 2026 Ghini Haberta Wiwoho</p>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <h2>Experience</h2>
+
+  <div class="grid">
+    <div class="card" onclick="openPopup('exp1')">PT Bank Rakyat Indonesia (Persero) Tbk</div>
+    <div class="card" onclick="openPopup('exp2')">PT. Mulia Properti Indah</div>
+    <div class="card" onclick="openPopup('exp3')">Kedai Reka x PT.Tiga Serangkai</div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2>Skills</h2>
+
+  <div class="grid">
+    <div class="skill"onclick="openPopup('skill1')">Hard Skills</div>
+    <div class="skill"onclick="openPopup('skill2')">Soft Skills</div>
+    <div class="skill"onclick="openPopup('skill3')">Project</div>
+  </div>
+</section>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <span class="close" onclick="closePopup()">×</span>
+    <h3 id="popup-title"></h3>
+    <p id="popup-text"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
